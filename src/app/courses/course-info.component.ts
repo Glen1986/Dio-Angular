@@ -7,16 +7,13 @@ import { Course } from './course'
     templateUrl: './course-info.component.html',
 })
 export class CourseInfoComponent implements OnInit {
-    course: Course
-    // courseId: number = 0
+    // course: Course
+    courseId: number = 0
 
     constructor(
-        private activatedRoute: ActivatedRoute,
-        private courseService: CourseService
+        private activatedRoute: ActivatedRoute // private courseService: CourseService
     ) {}
     ngOnInit(): void {
-
         this.courseId = +Number(this.activatedRoute.snapshot.paramMap.get('id'))
-
     }
 }
